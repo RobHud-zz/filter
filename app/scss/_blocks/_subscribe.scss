@@ -1,0 +1,93 @@
+.subscribe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    max-width: 760px;
+    margin: auto;
+    padding-top: var(--block-padding-top);
+
+    &__form {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    &__email {
+        background: #fff;
+        box-shadow: 0 24px 36px rgba(23, 42, 63, 0.08);
+        border-radius: 8px;
+        color: #3790fe;
+        border: 2px solid transparent;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 44px;
+        padding-left: 10px;
+        width: 49%;
+        height: 60px;
+        box-sizing: border-box;
+        transition: .3s ease-in;
+
+        &:hover, &:focus {
+            border-color: #3790fe;
+        }
+    }
+    &__button {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 44px;
+        color: #fff;
+        background: #3791fe;
+        border-radius: 8px;
+        border: none;
+        width: 49%;
+        height: 60px;
+        cursor: pointer;
+        transition: .3s ease-in;
+
+        &:hover {
+            box-shadow: 0 24px 36px rgba(23, 42, 63, 0.08);
+            background: #1d72da;
+        }
+    }
+    &__title {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 37px;
+        line-height: 50px;
+        color: #373f59;
+        padding: 0 0 40px 0;
+        text-align: center;
+    }
+    &__hidden {
+        opacity: 0;
+        position: absolute;
+        pointer-events: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .subscribe {
+        width: 90%;
+
+        &__form {
+            flex-direction: column;
+        }
+        &__email {
+            margin-bottom: 20px;
+        }
+        &__email, &__button {
+            width: 100%;
+        }
+        &__title {
+            font-size: 30px;
+            line-height: 40px;
+        }
+    }
+}
+
+@media only screen and (max-width: 431px) {
+    .subscribe {
+        margin-bottom: 50px;
+        --block-padding-top: 70px;
+    }
+}

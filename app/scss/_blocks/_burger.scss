@@ -1,0 +1,53 @@
+.burger {
+    position: fixed;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    width: 30px;
+    right: 30px;
+    top: 30px;
+
+    &__item {
+        position: absolute;
+        width: 30px;
+        background-color: white;
+        display: block;
+        height: 3px;
+        transition: 0.3s ease-in-out;
+
+        &:nth-child(1) {
+            transform: translateY(11px);
+        }
+        &:nth-child(3) {
+            transform: translateY(-11px);
+        }
+    }
+}
+
+.header-mob.active .burger {
+    align-items: center;
+    justify-content: center;
+
+    &__item {
+        &:nth-child(1) {
+            transform: rotate(45deg);
+        }
+        &:nth-child(2) {
+            opacity: 0;
+        }
+        &:nth-child(3) {
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+@media only screen and (max-width: 431px) {
+    .burger {
+        top: 25px;
+        right: 15px;
+    }
+}

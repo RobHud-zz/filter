@@ -1,0 +1,30 @@
+.wrap-blue {
+    position: relative;
+    padding-bottom: 60px;
+
+    .wrap-blue__cover {
+        position: absolute;
+        background-color: #EAF6FF;
+        height: calc(100% + 50px);
+        z-index: -1;
+        bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 1170px) {
+    .wrap-blue {
+        margin-bottom: 25px;
+
+        &__cover {
+            background-color: #EAF6FF;
+        }
+    }
+}
+
+@media only screen and (max-width: 765px) {
+    .wrap-blue {
+        &::before {
+            height: 470px;
+        }
+    }
+}

@@ -1,0 +1,154 @@
+::placeholder {
+    color: #637B94;
+}
+
+::selection {
+    background-color: #3692fe;
+    color: #fff;
+}
+h1 {
+    font-size: 60px;
+    line-height: 80px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+h2 {
+    font-size: 32px;
+    line-height: 42px;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+h3 {
+    font-size: 24px;
+    line-height: 44px;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+button {
+    cursor: pointer;
+}
+p {
+    font-size: 18px;
+    line-height: 36px;
+    margin-bottom: 25px;
+}
+p a {
+    position: relative;
+    transition: 0.2s ease-in-out;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background-color: #3692FE;
+        bottom: -3px;
+        left: 0;
+        opacity: 0.4;
+        transition: 0.2s ease-in-out;
+    }
+    
+    &:hover {
+        &::before {
+            background-color: #113355;
+        }
+    }
+}
+strong {
+    font-weight: normal;
+    color: #3692FE;
+    margin-right: 8px;
+}
+q {
+    font-size: 24px;
+    line-height: 44px;
+    font-style: italic;
+    padding-left: 30px;
+    border-left: 3px solid #3692FE;
+    display: block;
+    margin-bottom: 25px;
+}
+ol {
+    counter-reset: myCounter;
+}
+.svg-map {
+    visibility: hidden;
+    position: absolute;
+}
+ol li {
+    list-style: none;
+    position: relative;
+    margin-bottom: 5px;
+
+    &::before {
+        counter-increment: myCounter;
+        content:counter(myCounter);
+        color: #3692FE;
+        display: inline-block;
+        text-align: center;
+        margin-right: 10px;
+        line-height: 40px;
+    }
+    &::after {
+        content: '.';
+        position: absolute;
+        color: #3692FE;
+        bottom: 5px;
+        left: 11px;
+    }
+}
+
+body {
+    font-size: 18px;
+    min-width: 320px;
+    position: relative;
+    line-height: 1.65;
+    font-family: "Roboto", sans-serif;
+    color: #113355;
+    background-color: #f5f9fb;
+
+    input, textarea {
+        border: #666 1px solid;
+        outline: none;
+        &:focus:required:invalid {
+            border-color: red;
+        }
+        &:required:valid {
+            border-color: green;
+        }
+    }
+}
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    &.img-width {
+        width: 100%;
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+b, strong {
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 1170px) {
+    h1 {
+        font-size: 45px;
+        line-height: 55px;
+    }
+}
+
+@media only screen and (max-width: 765px) {
+    h1 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+}
